@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Bloom Maze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1 class="brand">Bloom</h1>
+      <p class="tagline" id="zone-label">jardim rosa</p>
+    </header>
+
+    <main class="stage">
+      <canvas id="board" width="510" height="578" aria-label="Labirinto"></canvas>
+      <div class="meter" aria-live="polite">
+        <div class="meter-fill" id="meter"></div>
+        <span id="pct">0/70</span>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="card">
+          <h2 id="overlay-title">um jardim rosa</h2>
+          <p id="overlay-text">Plante flores ate 70%. No tunel da esquerda tem um cantinho secreto com um vasinho especial.</p>
+          <button type="button" id="start-btn">comecar</button>
+        </div>
+      </div>
+    </main>
+
+    <nav class="pad" aria-label="Controles">
+      <button type="button" data-dir="up" aria-label="Cima">&#9650;</button>
+      <div class="pad-mid">
+        <button type="button" data-dir="left" aria-label="Esquerda">&#9664;</button>
+        <button type="button" data-dir="right" aria-label="Direita">&#9654;</button>
+      </div>
+      <button type="button" data-dir="down" aria-label="Baixo">&#9660;</button>
+    </nav>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
