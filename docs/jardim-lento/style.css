@@ -1,0 +1,166 @@
+/* Kindle 10 (600x800) — sem flex/grid, contraste alto, pouca rolagem */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body.kindle {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wrap {
+  padding: 6px 8px 10px;
+  box-sizing: border-box;
+}
+
+.brand {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.mood {
+  margin: 2px 0 6px;
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+}
+
+#garden {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto 6px;
+  border: 2px solid #000;
+  background: #c8cfc0;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+}
+
+.hud {
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.hud td {
+  width: 33%;
+  text-align: center;
+  padding: 6px 2px;
+  border-right: 1px solid #000;
+}
+
+.hud td:last-child {
+  border-right: none;
+}
+
+.hud b {
+  font-size: 15px;
+}
+
+.msg {
+  margin: 0 0 4px;
+  min-height: 2.2em;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.msg.event {
+  font-weight: bold;
+  border: 1px solid #000;
+  padding: 4px;
+  background: #eee;
+}
+
+.msg.event[hidden],
+#btn-skip[hidden],
+#plant-bar[hidden] {
+  display: none;
+}
+
+.plant-bar {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.timer {
+  margin: 4px 0 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.phase {
+  margin: 0 0 6px;
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+}
+
+.actions {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.actions td {
+  width: 50%;
+}
+
+.btn {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 10px 8px;
+  margin: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.btn.big {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 6px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.btn.primary {
+  background: #000;
+  color: #fff;
+}
+
+.btn:disabled {
+  opacity: 0.35;
+}
+
+.btn.link {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  padding: 8px 4px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.center, .foot {
+  text-align: center;
+  margin: 4px 0 0;
+  font-size: 12px;
+}

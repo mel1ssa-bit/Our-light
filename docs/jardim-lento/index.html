@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=600, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Jardim Lento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="kindle">
+  <div class="wrap">
+    <p class="brand">mel1ssa · JARDIM LENTO</p>
+    <p class="mood" id="mood">um vaso · sem pressa</p>
+
+    <canvas id="garden" width="320" height="280" aria-label="Seu vaso no jardim"></canvas>
+
+    <table class="hud" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>AGUA <b id="water">0</b></td>
+        <td>CICLO <b id="cycle">0/4</b></td>
+        <td>FOCOS <b id="total">0</b></td>
+      </tr>
+    </table>
+
+    <p class="msg" id="hint">Escolha o que plantar.</p>
+    <p class="msg event" id="event" hidden></p>
+
+    <div id="plant-bar" class="plant-bar">
+      <button type="button" class="btn" data-plant="daisy">margarida</button>
+      <button type="button" class="btn" data-plant="succulent">suculenta</button>
+      <button type="button" class="btn" data-plant="mushroom">cogumelo</button>
+    </div>
+
+    <p class="timer" id="timer">25:00</p>
+    <p class="phase" id="phase">pronto pra focar</p>
+
+    <table class="actions" cellspacing="6" cellpadding="0">
+      <tr>
+        <td><button type="button" class="btn big primary" id="btn-focus">FOCAR 25</button></td>
+        <td><button type="button" class="btn big" id="btn-break" disabled>PAUSA 5</button></td>
+      </tr>
+    </table>
+    <p class="center"><button type="button" class="btn link" id="btn-skip" hidden>PULAR</button></p>
+
+    <p class="foot">
+      <button type="button" class="btn link" id="btn-replant">trocar planta</button>
+      ·
+      <button type="button" class="btn link" id="btn-reset">reset</button>
+    </p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
