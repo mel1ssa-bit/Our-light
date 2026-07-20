@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Jardim Lento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="device">
+    <div class="device-screw tl" aria-hidden="true"></div>
+    <div class="device-screw tr" aria-hidden="true"></div>
+    <div class="device-screw bl" aria-hidden="true"></div>
+    <div class="device-screw br" aria-hidden="true"></div>
+
+    <header class="top">
+      <p class="brand-sub">mel1ssa</p>
+      <h1 class="brand">JARDIM LENTO</h1>
+      <p class="tagline" id="mood">um vaso · sem pressa</p>
+    </header>
+
+    <main class="stage">
+      <div class="lcd">
+        <canvas id="garden" width="480" height="420" aria-label="Seu vaso no jardim"></canvas>
+      </div>
+
+      <div class="hud">
+        <div class="stat"><span class="stat-ico">AGUA</span> <span id="water">0</span></div>
+        <div class="stat"><span class="stat-ico">CICLO</span> <span id="cycle">0/4</span></div>
+        <div class="stat"><span class="stat-ico">FOCOS</span> <span id="total">0</span></div>
+      </div>
+
+      <p class="hint" id="hint">Escolha o que plantar no vaso.</p>
+      <p class="event" id="event" hidden></p>
+
+      <div class="plant-bar" id="plant-bar">
+        <button type="button" class="chip" data-plant="daisy">margarida</button>
+        <button type="button" class="chip" data-plant="succulent">suculenta</button>
+        <button type="button" class="chip" data-plant="mushroom">cogumelo</button>
+      </div>
+
+      <section class="pomodoro" aria-label="Pomodoro">
+        <div class="timer" id="timer">25:00</div>
+        <p class="phase" id="phase">pronto pra focar</p>
+        <div class="actions">
+          <button type="button" class="btn primary" id="btn-focus">FOCAR 25</button>
+          <button type="button" class="btn" id="btn-break" disabled>PAUSA 5</button>
+          <button type="button" class="btn ghost" id="btn-skip" hidden>PULAR</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <button type="button" class="linkish" id="btn-replant">trocar planta</button>
+      <span class="dot" aria-hidden="true">·</span>
+      <button type="button" class="linkish" id="btn-reset">reset</button>
+    </footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
